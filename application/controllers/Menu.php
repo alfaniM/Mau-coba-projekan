@@ -3,6 +3,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Menu extends CI_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+        is_logged_in();
+    }
     public function index()
     {
         $data['title'] = 'Menu Management';
@@ -60,5 +65,11 @@ class Menu extends CI_Controller
             $this->session->set_flashdata('message', '<div class="alert alert-success>"New menu added!</div>');
             redirect('menu/submenu');
         }
+    }
+    public function delete($id)
+    {
+        $this->Menu_model->deleteMenu($id);
+        $this->session->set_flashdata('message', '<div class="alert alert-success>"Data dihapus!</div>');
+        redirect('menu/');
     }
 }
