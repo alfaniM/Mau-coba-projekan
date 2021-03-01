@@ -28,7 +28,7 @@
                             <td><?= $r['role']; ?></td>
                             <td>
                                 <a href="<?= base_url('admin/roleaccess/') . $r['id']; ?>" class="badge badge-warning">access</a>
-                                <a href="" class="badge badge-success" onclick="return confirm('yakin?');">delete</a>
+                                <a href="" class="badge badge-success" onclick="return confirm('yakin?');">edit</a>
                                 <a href="" class="badge badge-danger" onclick="return confirm('yakin?');">delete</a>
                             </td>
                         </tr>
