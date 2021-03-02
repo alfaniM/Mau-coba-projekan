@@ -12,6 +12,10 @@ class Auth extends CI_Controller
 
     public function index() // PENGATURAN FORM LOGIN
     {
+        //MENAMBAH SESSION KETIKA JADI USER SAAT KETIK DI URL UNTUK KEMBALI KE AUTH
+        if ($this->session->userdata('email')) {
+            redirect('user');
+        }
         // ATURAN YANG BERLAKU UNTUK FORM LOGIN
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email', [
             'required' => 'Mohon isikan email anda!',
@@ -70,6 +74,10 @@ class Auth extends CI_Controller
 
     public function registrasi()    // PENGATURAN FORM VALIDASI
     {
+        //MENAMBAH SESSION KETIKA JADI USER SAAT KETIK DI URL UNTUK KEMBALI AUTH TIDAK BISA
+        if ($this->session->userdata('email')) {
+            redirect('user');
+        }
         // ATURAN YANG BERLAKU UNTUK FORM REGISTRASI
         $this->form_validation->set_rules('name', 'Name', 'required|trim', [
             'required' => 'Mohon isikan nama lengkap anda!'
