@@ -163,10 +163,10 @@ class Auth extends CI_Controller
         }
     }
 
-    public function verify($token = false){
+    public function verify(){
 
         $email = $this->input->get('email');
-        $token - $this->input->get('token');
+        $token = $this->input->get('token');
 
         $user = $this->db->get_where('user', ['email' => $email])->row_array();
 
