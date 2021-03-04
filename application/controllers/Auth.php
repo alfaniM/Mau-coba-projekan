@@ -115,8 +115,8 @@ class Auth extends CI_Controller
             //SIAPKAN TOKEN BILANGAN RANDOM
             $token = base64_encode(random_bytes(32));
             $user_token = [
-                'email' => $email ,
-                'token' => $token ,
+                'email' => $email,
+                'token' => $token,
                 'date_created' => time()
             ];
 
@@ -128,16 +128,16 @@ class Auth extends CI_Controller
 
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Akun berhasil dibuat ! Silahkan Aktivasi akun anda.</div>');
             redirect('auth');
-        
         }
     }
 
-    private function _sendEmail($token, $type){
+    private function _sendEmail($token, $type)
+    {
         $config = [
             'protocol'  => 'smtp',
             'smtp_host' => 'ssl://smtp.googlemail.com',
-            'smtp_user' => 'erik@gmail.com',
-            'smtp_pass' => 'erik',
+            'smtp_user' => 'keqingwangy086@gmail.com',
+            'smtp_pass' => 'Keqing/123',
             'smtp_port' => 465,
             'mailtype'  => 'html',
             'charset'   => 'utf-8',
@@ -147,15 +147,15 @@ class Auth extends CI_Controller
         // $this->load->library('email', $config);
         $this->email->initialize($config);
 
-        $this->email->from('erik@gmail.com', 'Erik Rahman');
+        $this->email->from('keqingwangy086@gmail.com', 'Keqing Wangy');
         $this->email->to($this->input->post('email'));
 
-        if($type == 'verify'){
+        if ($type == 'verify') {
             $this->email->subject('Account Verification');
-            $this->email->message('Click this link to verify you account : <a href="'. base_url() . 'auth/verify?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '">Activate</a>');            
+            $this->email->message('Click this link to verify you account : <a href="' . base_url() . 'auth/verify?email=' . $this->input->post('email') . '&token=' . urlencode($token) . '">Activate</a>');
         }
 
-        if($this->email->send()){
+        if ($this->email->send()) {
             return true;
         } else {
             echo $this->email->print_debugger();
@@ -163,27 +163,28 @@ class Auth extends CI_Controller
         }
     }
 
-    public function verify(){
+    public function verify()
+    {
 
         $email = $this->input->get('email');
         $token = $this->input->get('token');
 
         $user = $this->db->get_where('user', ['email' => $email])->row_array();
 
-        if($user){
-            $user_token = $this->db->get_where('user_token',['token' => $token ])->row_array();
+        if ($user) {
+            $user_token = $this->db->get_where('user_token', ['token' => $token])->row_array();
 
-            if($user_token){
-                if(time() - $user_token['date_created'] < (60*60*24)){
+            if ($user_token) {
+                if (time() - $user_token['date_created'] < (60 * 60 * 24)) {
                     $this->db->set('is_active', 1);
                     $this->db->where('email', $email);
                     $this->db->update('user');
 
                     $this->db->delete('user_token', ['email' => $email]);
 
-                    $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">'. $email .' telah teraktivasi. Silahkan login.</div>');
+                    $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">' . $email . ' telah teraktivasi. Silahkan login.</div>');
                     redirect('auth');
-                }else{
+                } else {
 
                     $this->db->delete('user', ['email' => $email]);
                     $this->db->delete('user_token', ['email' => $email]);
@@ -191,13 +192,11 @@ class Auth extends CI_Controller
                     $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Aktivasi akun gagal! Token kadaluarsa.</div>');
                     redirect('auth');
                 }
-            }
-            else{
+            } else {
                 $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Aktivasi akun gagal! Token salah.</div>');
                 redirect('auth');
             }
-
-        } else{
+        } else {
             $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Aktivasi akun gagal! Email Salah.</div>');
             redirect('auth');
         }
