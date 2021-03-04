@@ -217,4 +217,26 @@ class Auth extends CI_Controller
     {
         $this->load->view('auth/blocked');
     }
+
+    public function forgotPassword()
+    {
+        $this->form_validation->set_rules('email', 'Email', 'trim|requiered|valid_email');
+
+        if ($this->form_validation->run() == false) {
+            $data['title'] = 'Forgot Password';
+            $this->load->view('templates/auth_header', $data);
+            $this->load->view('auth/forgot-password');
+            $this->load->view('templates/auth_footer');
+        } else {
+            $email = $this->input->post('email');
+            $user = $this->db->get_where('user', ['email' => $email, 'is_active' => 1])->row_array();
+
+            if ($user) {
+            } else {
+                // KELUAR DARI FORM USER DAN KEMBALI KE FORM LOGIN
+                $this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Email belum terdaftar!</div>');
+                redirect('auth/forgotpassword');
+            }
+        }
+    }
 }
