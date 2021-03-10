@@ -137,7 +137,7 @@ class Auth extends CI_Controller
             'protocol'  => 'smtp',
             'smtp_host' => 'ssl://smtp.googlemail.com',
             'smtp_user' => 'keqingwangy086@gmail.com',
-            'smtp_pass' => 'Keqing/123',
+            'smtp_pass' => 'keqing/123',
             'smtp_port' => 465,
             'mailtype'  => 'html',
             'charset'   => 'utf-8',
