@@ -48,6 +48,16 @@
 <!-- Custom scripts for all pages-->
 <script src="<?= base_url('assets/'); ?>js/sb-admin-2.min.js"></script>
 
+<!-- DATE PICKER -->
+<script src="bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script>
+    $('#tanggal').datepicker({
+        format: 'yyyy-mm-dd',
+        daysOfWeekDisabled: "0",
+        autoclose: true
+    });
+</script>
+
 <script>
     $('.custom-file-input').on('change', function() {
         let filename = $(this).val().split('\\').pop();
