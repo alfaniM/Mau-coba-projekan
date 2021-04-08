@@ -124,4 +124,31 @@ class User extends CI_Controller
         $this->load->view('user/persuratan', $data);
         $this->load->view('templates/footer');
     }
+
+    public function pdf()
+    {
+
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('forms/penilaian_pkl', $data);
+
+
+        $html = $this->output->get_output();
+        $this->load->library('pdf');
+        $this->pdf->loadHtml($html);
+        $this->pdf->setPaper('A4', 'portrait');
+        $this->pdf->render();
+
+        $this->pdf->stream("html_contents.pdf", array("Attachment" => 0));
+        // $paper_size = 'A4';
+        // $orientation = 'landscape';
+        // $html = $this->output->get_output();
+        // $this->dompdf->load_html($html);
+        // $this->dompdf->render();
+        // $this->dompdf->stream("Form PKL.pdf", array('Attachement' => 0));
+
+        // $this->pdf->setPaper('A4', 'potrait');
+        // $this->pdf->filename = "laporan-petanikode.pdf";
+        // $this->pdf->load_view('laporan_pdf', $data);
+    }
 }

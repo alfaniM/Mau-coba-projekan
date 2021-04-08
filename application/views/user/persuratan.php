@@ -142,7 +142,8 @@
                                                             <input type="number" name="lama_pkl" class="form-control">
                                                         </div>
                                                     </div>
-                                                    <button type="submit" class="btn btn-info" id="btnsubmit" style=""> Download </button>
+                                                    <a class="btn btn-info" href="<?= base_url('user/pdf'); ?>"><i class="fa fa-file"></i> Download</a>
+                                                    <!-- <button type="submit" class="btn btn-info" id="btnsubmit"> Download </button> -->
                                                 </div>
                                                 <!-- ENd form input 2 -->
                                                 <div class="2 box col-md">
