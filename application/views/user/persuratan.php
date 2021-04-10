@@ -206,6 +206,7 @@
                                                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tempat PKL">
                                                         </div>
                                                     </div>
+                                                    <button type="submit" class="btn btn-info" id="btnsubmit" style=""> Download </button>
                                                 </div>
                                                 <!-- ====================================== NILAI PEMBIMBING SEMINAR PROPOSAL PENELITIAN ====================================== -->
                                                 <div class="5 box col-md">
@@ -227,6 +228,7 @@
                                                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tempat PKL">
                                                         </div>
                                                     </div>
+                                                    <button type="submit" class="btn btn-info" id="btnsubmit" style=""> Download </button>
                                                 </div>
                                                 <!-- ====================================== REKAPITULASI NILAI SEMINAR PROPOSAL PENELITIAN ====================================== -->
                                                 <div class="6 box col-md">
@@ -248,6 +250,7 @@
                                                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tempat PKL">
                                                         </div>
                                                     </div>
+                                                    <button type="submit" class="btn btn-info" id="btnsubmit" style=""> Download </button>
                                                 </div>
                                                 <!-- ====================================== NILAI PEMBIMBING SEMINAR HASIL PENELITIAN ====================================== -->
                                                 <div class="7 box col-md">
@@ -261,6 +264,7 @@
                                                             <input type="date" name="periode_awal" class="form-control" required="">
                                                         </div>
                                                     </div>
+                                                    <button type="submit" class="btn btn-info" id="btnsubmit" style=""> Download </button>
                                                 </div>
                                                 <!-- ====================================== NILAI PENGUJI SEMINAR HASIL PENELITIAN ====================================== -->
                                                 <div class="8 box col-md">
@@ -274,12 +278,13 @@
                                                             <input type="date" name="periode_awal" class="form-control" required="">
                                                         </div>
                                                     </div>
+                                                    <button type="submit" class="btn btn-info" id="btnsubmit" style=""> Download </button>
                                                 </div>
                                                 <!-- ====================================== REKAPITULASI NILAI SEMINAR HASIL PENELITIAN ====================================== -->
                                                 <div class="9 box col-md">
                                                     <div id="form_surat">
                                                         <div class="form-group">
-                                                            <label> Judul PRoposal </label>
+                                                            <label> Judul Proposal </label>
                                                             <textarea class="form-control" name="judul_skripsi" rows="5" required="required"></textarea>
                                                         </div>
                                                         <div class="form-group">
@@ -295,6 +300,7 @@
                                                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tempat PKL">
                                                         </div>
                                                     </div>
+                                                    <button type="submit" class="btn btn-info" id="btnsubmit" style=""> Download </button>
                                                 </div>
                                                 <!-- ====================================== NILAI SKRIPSI UNTUK PEMBIMBINGs ====================================== -->
                                                 <div class="10 box col-md">
@@ -336,6 +342,7 @@
                                                             <input type="date" name="periode_awal" class="form-control" required="">
                                                         </div>
                                                     </div>
+                                                    <button type="submit" class="btn btn-info" id="btnsubmit" style=""> Download </button>
                                                 </div>
                                                 <!-- ====================================== NILAI SKRIPSI UNTUK PENGUJI ====================================== -->
                                                 <div class="11 box col-md">
@@ -377,10 +384,49 @@
                                                             <input type="date" name="periode_awal" class="form-control" required="">
                                                         </div>
                                                     </div>
+                                                    <button type="submit" class="btn btn-info" id="btnsubmit" style=""> Download </button>
                                                 </div>
                                                 <!-- ====================================== NILAI SKRIPSI UNTUK PENGUJI ====================================== -->
                                                 <div class="12 box col-md">
-                                                    <h1>Fani ganteng</h1>
+                                                    <div id="form_surat">
+                                                        <div class="form-group">
+                                                            <label> Judul </label>
+                                                            <textarea class="form-control" name="judul_skripsi" rows="5" required="required"></textarea>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Tanggal Ujian Skripsi </label>
+                                                            <input type="date" name="periode_awal" class="form-control" required="">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label> Dosen Penguji 1
+                                                            </label>
+                                                            <select class="form-control" name="dospem1" onchange="dospema1(this.value)">
+                                                                <option value="">Pilih Dospem 1</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label> Dosen Penguji 2
+                                                            </label>
+                                                            <select class="form-control" name="dospem1" onchange="dospema1(this.value)">
+                                                                <option value="">Pilih Dospem 2</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label> Dosen Pembimbing 1
+                                                            </label>
+                                                            <select class="form-control" name="dospem1" onchange="dospema1(this.value)">
+                                                                <option value="">Pilih Dospem 1</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label> Dosen Pembimbing 2
+                                                            </label>
+                                                            <select class="form-control" name="dospem1" onchange="dospema1(this.value)">
+                                                                <option value="">Pilih Dospem 2</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-info" id="btnsubmit" style=""> Download </button>
                                                 </div>
 
                                             </div>
