@@ -127,10 +127,301 @@ class User extends CI_Controller
 
     public function pdf()
     {
-
+        //Form PENILAIAN PKL PEMBIMBING BIDANG PENULISAN LAPORAN
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
         $this->load->view('forms/penilaian_pkl', $data);
+
+
+        $html = $this->output->get_output();
+        $this->load->library('pdf');
+        $this->pdf->loadHtml($html);
+        $this->pdf->setPaper('A4', 'portrait');
+        $this->pdf->render();
+
+        $this->pdf->stream("html_contents.pdf", array("Attachment" => 0));
+        // $paper_size = 'A4';
+        // $orientation = 'landscape';
+        // $html = $this->output->get_output();
+        // $this->dompdf->load_html($html);
+        // $this->dompdf->render();
+        // $this->dompdf->stream("Form PKL.pdf", array('Attachement' => 0));
+
+        // $this->pdf->setPaper('A4', 'potrait');
+        // $this->pdf->filename = "laporan-petanikode.pdf";
+        // $this->pdf->load_view('laporan_pdf', $data);
+    }
+    public function pdf2()
+    {
+        //Form PENILAIAN PKL PEMBIMBING BIDANG KEGIATAN
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('forms/penilaian_pkl2', $data);
+
+
+        $html = $this->output->get_output();
+        $this->load->library('pdf');
+        $this->pdf->loadHtml($html);
+        $this->pdf->setPaper('A4', 'portrait');
+        $this->pdf->render();
+
+        $this->pdf->stream("html_contents.pdf", array("Attachment" => 0));
+        // $paper_size = 'A4';
+        // $orientation = 'landscape';
+        // $html = $this->output->get_output();
+        // $this->dompdf->load_html($html);
+        // $this->dompdf->render();
+        // $this->dompdf->stream("Form PKL.pdf", array('Attachement' => 0));
+
+        // $this->pdf->setPaper('A4', 'potrait');
+        // $this->pdf->filename = "laporan-petanikode.pdf";
+        // $this->pdf->load_view('laporan_pdf', $data);
+    }
+    public function pdf3()
+    {
+        //Form REKAPITULASI PENILAIAN PRAKTEK KERJA LAPANG (PKL)
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('forms/rekap_pkl', $data);
+
+
+        $html = $this->output->get_output();
+        $this->load->library('pdf');
+        $this->pdf->loadHtml($html);
+        $this->pdf->setPaper('A4', 'portrait');
+        $this->pdf->render();
+
+        $this->pdf->stream("html_contents.pdf", array("Attachment" => 0));
+        // $paper_size = 'A4';
+        // $orientation = 'landscape';
+        // $html = $this->output->get_output();
+        // $this->dompdf->load_html($html);
+        // $this->dompdf->render();
+        // $this->dompdf->stream("Form PKL.pdf", array('Attachement' => 0));
+
+        // $this->pdf->setPaper('A4', 'potrait');
+        // $this->pdf->filename = "laporan-petanikode.pdf";
+        // $this->pdf->load_view('laporan_pdf', $data);
+    }
+
+    public function pdf4()
+    {
+        //Form NILAI PENGUJI SEMINAR PROPOSAL PENELITIAN
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('forms/npj_seminar_proposal', $data);
+
+
+        $html = $this->output->get_output();
+        $this->load->library('pdf');
+        $this->pdf->loadHtml($html);
+        $this->pdf->setPaper('A4', 'portrait');
+        $this->pdf->render();
+
+        $this->pdf->stream("html_contents.pdf", array("Attachment" => 0));
+        // $paper_size = 'A4';
+        // $orientation = 'landscape';
+        // $html = $this->output->get_output();
+        // $this->dompdf->load_html($html);
+        // $this->dompdf->render();
+        // $this->dompdf->stream("Form PKL.pdf", array('Attachement' => 0));
+
+        // $this->pdf->setPaper('A4', 'potrait');
+        // $this->pdf->filename = "laporan-petanikode.pdf";
+        // $this->pdf->load_view('laporan_pdf', $data);
+    }
+    public function pdf5()
+    {
+        //Form NILAI PEMBIMBING SEMINAR PROPOSAL PENELITIAN
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('forms/np_seminar_proposal', $data);
+
+
+        $html = $this->output->get_output();
+        $this->load->library('pdf');
+        $this->pdf->loadHtml($html);
+        $this->pdf->setPaper('A4', 'portrait');
+        $this->pdf->render();
+
+        $this->pdf->stream("html_contents.pdf", array("Attachment" => 0));
+        // $paper_size = 'A4';
+        // $orientation = 'landscape';
+        // $html = $this->output->get_output();
+        // $this->dompdf->load_html($html);
+        // $this->dompdf->render();
+        // $this->dompdf->stream("Form PKL.pdf", array('Attachement' => 0));
+
+        // $this->pdf->setPaper('A4', 'potrait');
+        // $this->pdf->filename = "laporan-petanikode.pdf";
+        // $this->pdf->load_view('laporan_pdf', $data);
+    }
+
+    public function pdf6()
+    {
+        //Form REKAPITULASI NILAI SEMINAR PROPOSAL PENELITIAN
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('forms/rekap_seminar_proposal', $data);
+
+
+        $html = $this->output->get_output();
+        $this->load->library('pdf');
+        $this->pdf->loadHtml($html);
+        $this->pdf->setPaper('A4', 'portrait');
+        $this->pdf->render();
+
+        $this->pdf->stream("html_contents.pdf", array("Attachment" => 0));
+        // $paper_size = 'A4';
+        // $orientation = 'landscape';
+        // $html = $this->output->get_output();
+        // $this->dompdf->load_html($html);
+        // $this->dompdf->render();
+        // $this->dompdf->stream("Form PKL.pdf", array('Attachement' => 0));
+
+        // $this->pdf->setPaper('A4', 'potrait');
+        // $this->pdf->filename = "laporan-petanikode.pdf";
+        // $this->pdf->load_view('laporan_pdf', $data);
+    }
+
+
+    public function pdf7()
+    {
+        //Form NILAI PEMBIMBING SEMINAR HASIL PENELITIAN
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('forms/np_seminar_proposal', $data);
+
+
+        $html = $this->output->get_output();
+        $this->load->library('pdf');
+        $this->pdf->loadHtml($html);
+        $this->pdf->setPaper('A4', 'portrait');
+        $this->pdf->render();
+
+        $this->pdf->stream("html_contents.pdf", array("Attachment" => 0));
+        // $paper_size = 'A4';
+        // $orientation = 'landscape';
+        // $html = $this->output->get_output();
+        // $this->dompdf->load_html($html);
+        // $this->dompdf->render();
+        // $this->dompdf->stream("Form PKL.pdf", array('Attachement' => 0));
+
+        // $this->pdf->setPaper('A4', 'potrait');
+        // $this->pdf->filename = "laporan-petanikode.pdf";
+        // $this->pdf->load_view('laporan_pdf', $data);
+    }
+    public function pdf8()
+    {
+        //Form NILAI PENGUJI SEMINAR HASIL PENELITIAN
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('forms/npj_seminar_hasil', $data);
+
+
+        $html = $this->output->get_output();
+        $this->load->library('pdf');
+        $this->pdf->loadHtml($html);
+        $this->pdf->setPaper('A4', 'portrait');
+        $this->pdf->render();
+
+        $this->pdf->stream("html_contents.pdf", array("Attachment" => 0));
+        // $paper_size = 'A4';
+        // $orientation = 'landscape';
+        // $html = $this->output->get_output();
+        // $this->dompdf->load_html($html);
+        // $this->dompdf->render();
+        // $this->dompdf->stream("Form PKL.pdf", array('Attachement' => 0));
+
+        // $this->pdf->setPaper('A4', 'potrait');
+        // $this->pdf->filename = "laporan-petanikode.pdf";
+        // $this->pdf->load_view('laporan_pdf', $data);
+    }
+    public function pdf9()
+    {
+        //Form REKAPITULASI NILAI SEMINAR HASIL PENELITIAN
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('forms/npj_seminar_hasil', $data);
+
+
+        $html = $this->output->get_output();
+        $this->load->library('pdf');
+        $this->pdf->loadHtml($html);
+        $this->pdf->setPaper('A4', 'portrait');
+        $this->pdf->render();
+
+        $this->pdf->stream("html_contents.pdf", array("Attachment" => 0));
+        // $paper_size = 'A4';
+        // $orientation = 'landscape';
+        // $html = $this->output->get_output();
+        // $this->dompdf->load_html($html);
+        // $this->dompdf->render();
+        // $this->dompdf->stream("Form PKL.pdf", array('Attachement' => 0));
+
+        // $this->pdf->setPaper('A4', 'potrait');
+        // $this->pdf->filename = "laporan-petanikode.pdf";
+        // $this->pdf->load_view('laporan_pdf', $data);
+    }
+
+    public function pdf10()
+    {
+        //Form NILAI SKRIPSI UNTUK PEMBIMBING
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('forms/np_skripsi', $data);
+
+
+        $html = $this->output->get_output();
+        $this->load->library('pdf');
+        $this->pdf->loadHtml($html);
+        $this->pdf->setPaper('A4', 'portrait');
+        $this->pdf->render();
+
+        $this->pdf->stream("html_contents.pdf", array("Attachment" => 0));
+        // $paper_size = 'A4';
+        // $orientation = 'landscape';
+        // $html = $this->output->get_output();
+        // $this->dompdf->load_html($html);
+        // $this->dompdf->render();
+        // $this->dompdf->stream("Form PKL.pdf", array('Attachement' => 0));
+
+        // $this->pdf->setPaper('A4', 'potrait');
+        // $this->pdf->filename = "laporan-petanikode.pdf";
+        // $this->pdf->load_view('laporan_pdf', $data);
+    }
+    public function pdf11()
+    {
+        //Form NILAI SKRIPSI UNTUK PENGUJI
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('forms/npj_skripsi', $data);
+
+
+        $html = $this->output->get_output();
+        $this->load->library('pdf');
+        $this->pdf->loadHtml($html);
+        $this->pdf->setPaper('A4', 'portrait');
+        $this->pdf->render();
+
+        $this->pdf->stream("html_contents.pdf", array("Attachment" => 0));
+        // $paper_size = 'A4';
+        // $orientation = 'landscape';
+        // $html = $this->output->get_output();
+        // $this->dompdf->load_html($html);
+        // $this->dompdf->render();
+        // $this->dompdf->stream("Form PKL.pdf", array('Attachement' => 0));
+
+        // $this->pdf->setPaper('A4', 'potrait');
+        // $this->pdf->filename = "laporan-petanikode.pdf";
+        // $this->pdf->load_view('laporan_pdf', $data);
+    }
+    public function pdf12()
+    {
+        //Form BERITA ACARA UJIAN SKRIPSI
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+        $this->load->view('forms/skripsi_us', $data);
 
 
         $html = $this->output->get_output();
