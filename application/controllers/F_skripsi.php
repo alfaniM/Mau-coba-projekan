@@ -66,17 +66,18 @@ class F_skripsi extends REST_Controller
             );
 
              
-                    $data['nama_pembimbing'] = $jsondata['nama_pembimbing'];
-                    $data['mhs_id'] = $jsondata['mhs_id'];
-                    $data['lokasi'] = $jsondata['lokasi'];
-                    $data['nama_perusahaan'] = $jsondata['nama_perusahaan'];
-                    $data['jobdesk'] = $jsondata['jobdesk'];
+            $data['nama_pembimbing'] = $jsondata['nama_pembimbing'];
+            $data['mhs_id'] = $jsondata['mhs_id'];
+            $data['lokasi'] = $jsondata['lokasi'];
+            $data['nama_perusahaan'] = $jsondata['nama_perusahaan'];
+            $data['jobdesk'] = $jsondata['jobdesk'];
 
-                    $insert = $this->crud->insert_id('pkl_data', $data);
-                    $result = array(
-                        'status' => 'success',
-                        'id_data' => $insert
-                    );
-                    $this->set_response($result, REST_Controller::HTTP_CREATED); 
-        }
+            $insert = $this->crud->insert_id('pkl_data', $data);
+            $result = array(
+                'status' => 'success',
+                'id_data' => $insert
+            );
+            $this->set_response($result, REST_Controller::HTTP_CREATED); 
+    }
+
 }
