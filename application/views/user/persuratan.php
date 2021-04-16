@@ -126,7 +126,7 @@
                                                     </table>
 
                                                 </div>
-                                                <!-- form input 1 -->
+                                                <!-- form input 1 (PENILAIAN PKL PEMBIMBING BIDANG PENULISAN LAPORAN) -->
                                                 <div class="1 box col-md">
                                                     <div id="form_surat">
                                                         <div class="mb-3">
@@ -145,7 +145,7 @@
                                                     <a class="btn btn-info" href="<?= base_url('user/pdf'); ?>"><i class="fa fa-file"></i> Download</a>
                                                     <!-- <button type="submit" class="btn btn-info" id="btnsubmit"> Download </button> -->
                                                 </div>
-                                                <!-- ENd form input 2 -->
+                                                <!--form input 2 (PENILAIAN PKL PEMBIMBING BIDANG KEGIATAN) -->
                                                 <div class="2 box col-md">
                                                     <div id="form_surat">
                                                         <div class="mb-3">
@@ -161,10 +161,10 @@
                                                             <input type="number" name="lama_pkl" class="form-control">
                                                         </div>
                                                     </div>
-                                                    <button type="submit" class="btn btn-info" id="btnsubmit" style=""> Download </button>
+                                                    <a class="btn btn-info" href="<?= base_url('user/pdf2'); ?>"><i class="fa fa-file"></i> Download</a>
 
                                                 </div>
-                                                <!-- ====================================== FORM REKAPITULASI ====================================== -->
+                                                <!-- ====================================== FORM REKAPITULASI (REKAPITULASI PENILAIAN PRAKTEKKERJA LAPANG (PKL)) ====================================== -->
                                                 <div class="3 box col-md">
                                                     <div id="form_surat">
                                                         <div class="form-group">
@@ -184,7 +184,7 @@
                                                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tempat PKL">
                                                         </div>
                                                     </div>
-                                                    <button type="submit" class="btn btn-info" id="btnsubmit" style=""> Download </button>
+                                                    <a class="btn btn-info" href="<?= base_url('user/pdf3'); ?>"><i class="fa fa-file"></i> Download</a>
                                                 </div>
                                                 <!-- ====================================== NILAI PENGUJI SEMINAR PROPOSAL PENELITIAN ====================================== -->
                                                 <div class="4 box col-md">
@@ -206,6 +206,7 @@
                                                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tempat PKL">
                                                         </div>
                                                     </div>
+                                                    <a class="btn btn-info" href="<?= base_url('user/pdf4'); ?>"><i class="fa fa-file"></i> Download</a>
                                                 </div>
                                                 <!-- ====================================== NILAI PEMBIMBING SEMINAR PROPOSAL PENELITIAN ====================================== -->
                                                 <div class="5 box col-md">
@@ -227,6 +228,7 @@
                                                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tempat PKL">
                                                         </div>
                                                     </div>
+                                                    <a class="btn btn-info" href="<?= base_url('user/pdf5'); ?>"><i class="fa fa-file"></i> Download</a>
                                                 </div>
                                                 <!-- ====================================== REKAPITULASI NILAI SEMINAR PROPOSAL PENELITIAN ====================================== -->
                                                 <div class="6 box col-md">
@@ -248,6 +250,7 @@
                                                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tempat PKL">
                                                         </div>
                                                     </div>
+                                                    <a class="btn btn-info" href="<?= base_url('user/pdf6'); ?>"><i class="fa fa-file"></i> Download</a>
                                                 </div>
                                                 <!-- ====================================== NILAI PEMBIMBING SEMINAR HASIL PENELITIAN ====================================== -->
                                                 <div class="7 box col-md">
@@ -261,6 +264,7 @@
                                                             <input type="date" name="periode_awal" class="form-control" required="">
                                                         </div>
                                                     </div>
+                                                    <a class="btn btn-info" href="<?= base_url('user/pdf7'); ?>"><i class="fa fa-file"></i> Download</a>
                                                 </div>
                                                 <!-- ====================================== NILAI PENGUJI SEMINAR HASIL PENELITIAN ====================================== -->
                                                 <div class="8 box col-md">
@@ -274,12 +278,13 @@
                                                             <input type="date" name="periode_awal" class="form-control" required="">
                                                         </div>
                                                     </div>
+                                                    <a class="btn btn-info" href="<?= base_url('user/pdf8'); ?>"><i class="fa fa-file"></i> Download</a>
                                                 </div>
                                                 <!-- ====================================== REKAPITULASI NILAI SEMINAR HASIL PENELITIAN ====================================== -->
                                                 <div class="9 box col-md">
                                                     <div id="form_surat">
                                                         <div class="form-group">
-                                                            <label> Judul PRoposal </label>
+                                                            <label> Judul Proposal </label>
                                                             <textarea class="form-control" name="judul_skripsi" rows="5" required="required"></textarea>
                                                         </div>
                                                         <div class="form-group">
@@ -295,8 +300,9 @@
                                                             <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tempat PKL">
                                                         </div>
                                                     </div>
+                                                    <a class="btn btn-info" href="<?= base_url('user/pdf9'); ?>"><i class="fa fa-file"></i> Download</a>
                                                 </div>
-                                                <!-- ====================================== NILAI SKRIPSI UNTUK PEMBIMBINGs ====================================== -->
+                                                <!-- ====================================== NILAI SKRIPSI UNTUK PEMBIMBING ====================================== -->
                                                 <div class="10 box col-md">
                                                     <div id="form_surat">
                                                         <div class="form-group">
@@ -336,6 +342,7 @@
                                                             <input type="date" name="periode_awal" class="form-control" required="">
                                                         </div>
                                                     </div>
+                                                    <a class="btn btn-info" href="<?= base_url('user/pdf10'); ?>"><i class="fa fa-file"></i> Download</a>
                                                 </div>
                                                 <!-- ====================================== NILAI SKRIPSI UNTUK PENGUJI ====================================== -->
                                                 <div class="11 box col-md">
@@ -377,10 +384,49 @@
                                                             <input type="date" name="periode_awal" class="form-control" required="">
                                                         </div>
                                                     </div>
+                                                    <a class="btn btn-info" href="<?= base_url('user/pdf11'); ?>"><i class="fa fa-file"></i> Download</a>
                                                 </div>
-                                                <!-- ====================================== NILAI SKRIPSI UNTUK PENGUJI ====================================== -->
+                                                <!-- ====================================== BERITA ACARA UJIAN SKRIPSI ====================================== -->
                                                 <div class="12 box col-md">
-                                                    <h1>Fani ganteng</h1>
+                                                    <div id="form_surat">
+                                                        <div class="form-group">
+                                                            <label> Judul </label>
+                                                            <textarea class="form-control" name="judul_skripsi" rows="5" required="required"></textarea>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label>Tanggal Ujian Skripsi </label>
+                                                            <input type="date" name="periode_awal" class="form-control" required="">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label> Dosen Penguji 1
+                                                            </label>
+                                                            <select class="form-control" name="dospem1" onchange="dospema1(this.value)">
+                                                                <option value="">Pilih Dospem 1</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label> Dosen Penguji 2
+                                                            </label>
+                                                            <select class="form-control" name="dospem1" onchange="dospema1(this.value)">
+                                                                <option value="">Pilih Dospem 2</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label> Dosen Pembimbing 1
+                                                            </label>
+                                                            <select class="form-control" name="dospem1" onchange="dospema1(this.value)">
+                                                                <option value="">Pilih Dospem 1</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label> Dosen Pembimbing 2
+                                                            </label>
+                                                            <select class="form-control" name="dospem1" onchange="dospema1(this.value)">
+                                                                <option value="">Pilih Dospem 2</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <a class="btn btn-info" href="<?= base_url('user/pdf12'); ?>"><i class="fa fa-file"></i> Download</a>
                                                 </div>
 
                                             </div>
